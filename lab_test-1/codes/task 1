@@ -1,0 +1,28 @@
+class SRU_Student:
+    def __init__(self, name, roll_no, department):
+        self.name = name
+        self.roll_no = roll_no
+        self.department = department
+
+    def get_details(self):
+        return {
+            'Name': self.name,
+            'Roll No': self.roll_no,
+            'Department': self.department
+        }
+
+student_Data = []
+
+# Taking input from user
+name = input("Enter student name: ")
+roll_no = input("Enter Roll No: ")
+department = input("Enter Department: ")
+
+# Creating SRU_Student object and adding to student_Data
+student = SRU_Student(name, roll_no, department)
+student_Data.append(student.get_details())
+
+# Output the student data
+print("Student Data:")
+for data in student_Data:
+    print(data)
